@@ -1,9 +1,7 @@
 import SimpleITK as sitk
-import pandas as pd
 from pydicom import dcmread, dcmwrite
 import numpy as np
 import os
-import argparse
 import glob
 
 
@@ -101,12 +99,5 @@ def changePixelData(image: sitk.Image, templateDicomFolder: str, outpuFolder: st
         dcm.PixelData = imageArr[i].tobytes()
         dcmwrite(os.path.join(outpuFolder, os.path.basename(dcms[i])), dcm)
 
-
-
-def main(args):
-    pass
-
-
 if __name__ == "__main__":
     pass
-    # main()

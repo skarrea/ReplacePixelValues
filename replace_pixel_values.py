@@ -1,7 +1,6 @@
 import SimpleITK as sitk
 import pandas as pd
 from pydicom import dcmread, dcmwrite
-import matplotlib.pyplot as plt
 import numpy as np
 import os
 import argparse
